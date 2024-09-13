@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+    <script src="loadFooter.js" defer></script>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="https://kit.fontawesome.com/1165876da6.js" crossorigin="anonymous"></script>
+    <style>
+        .error-message {
+            color: red;
+            font-size: 0.9em;
+        }
+    </style>
+    </head>
+
+<body>
+    <header>
+        <h2 class="logo">IT SCHOLAR NOTE</h2>
+        <nav class="navigation">
+            <a href="home.html" class="home-link">Home</a>
+            <a href="syllabus.html" class="syllabus-link">Syllabus</a>
+            
+                <a href="semester.html" class="semester-link">List of Semester</a>
+                
+            <a href="#">Question Paper</a>
+            <a href="contact.html" class="contact-link">Contact</a>
+        
+            <a href="notes.html" class="notes-link">Notes</a>
+            
+            <div class="profile-dropdown">
+                <div onclick="toggle()" class="profile-dropdown-btn">
+                  <div class="profile-img">
+                    <i class="fa-solid fa-circle"></i>
+                  </div>
+        
+                  <span
+                    >Admin
+                    <i class="fa-solid fa-angle-down"></i>
+                  </span>
+                </div>
+        
+                <ul class="profile-dropdown-list">
+                  <li class="profile-dropdown-list-item">
+                    <a href="#">
+                      <i class="fa-regular fa-user"></i>
+                      Edit Profile
+                    </a>
+                  </li>
+        
+                  <li class="profile-dropdown-list-item">
+                    <a href="#">
+                      <i class="fa-regular fa-envelope"></i>
+                      Inbox
+                    </a>
+                  </li>
+        
+                  <li class="profile-dropdown-list-item">
+                    <a href="#">
+                      <i class="fa-solid fa-chart-line"></i>
+                      Analytics
+                    </a>
+                  </li>
+        
+                  <li class="profile-dropdown-list-item">
+                    <a href="#">
+                      <i class="fa-solid fa-sliders"></i>
+                      Settings
+                    </a>
+                  </li>
+        
+                  <li class="profile-dropdown-list-item">
+                    <a href="#">
+                      <i class="fa-regular fa-circle-question"></i>
+                      Help & Support
+                    </a>
+                  </li>
+                  <hr />
+        
+                  <li class="profile-dropdown-list-item">
+                    <a href="#">
+                      <i class="fa-solid fa-arrow-right-from-bracket"></i>
+                      Log out
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </nav>
+            
+        </nav>
+        <button class="menu-toggle">
+            <ion-icon name="menu-outline"></ion-icon>
+        </button>
+    </header>
+    
+<div class="notes-container">
+    <h2>About Notes</h2>
+    <p>We have a collection of notes on various subjects. You can find detailed notes by students here.
+        Notes are uploaded by students by their own.And those notes can be availabe after doing the payment process
+        through esewa.
+        Notes price start from Rs. 50. This is an opportunity for students to sell their notes and earn money while
+        studying.
+    </p>
+    <h3>Upload Your Notes</h3>
+    <div class="upload-section">
+
+        <form action="upload_notes.php" method="POST" enctype="multipart/form-data">
+            <label for="note-title">Note Title:</label>
+            <input type="text" id="note-title" name="note_title" required placeholder="Enter the title of your note">
+
+            <label for="note-file">Choose Note File (PDF, DOC, etc.):</label>
+            <input type="file" id="note-file" name="note_file" accept=".pdf,.doc,.docx" required>
+
+            <label for="note-price">Set Price (Rs):</label>
+            <input type="number" id="note-price" name="note_price" min="50" required placeholder="Set your note price">
+
+            <input type="submit" value="Upload Note">
+        </form>
+    </div>
+    </div>
+    
+
+
+
+<script src="script.js"></script>
+</body>
+</html>
